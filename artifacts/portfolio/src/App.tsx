@@ -12,7 +12,6 @@ import About from "@/pages/about";
 import Skills from "@/pages/skills";
 import Projects from "@/pages/projects";
 import Services from "@/pages/services";
-import Blog from "@/pages/blog";
 import Contact from "@/pages/contact";
 
 const queryClient = new QueryClient();
@@ -26,7 +25,6 @@ function Router() {
         <Route path="/skills" component={Skills} />
         <Route path="/projects" component={Projects} />
         <Route path="/services" component={Services} />
-        <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>

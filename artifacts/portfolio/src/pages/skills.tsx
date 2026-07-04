@@ -129,7 +129,10 @@ export default function Skills() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-background hover:bg-primary/10 border border-border">
+                  <Badge
+                    variant="secondary"
+                    className="px-4 py-2 text-sm font-medium"
+                  >
                     {tool}
                   </Badge>
                 </motion.div>

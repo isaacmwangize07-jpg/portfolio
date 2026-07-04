@@ -38,17 +38,47 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real app, this would be an API call
-    console.log(values);
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-      variant: "default",
-    });
-    
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("https://formspree.io/f/mkolklla", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+          _replyto: values.email,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        throw new Error(
+          errorData?.error || "Unable to send message. Please try again later.",
+        );
+      }
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+        variant: "default",
+      });
+
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Unable to send message",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Please try again later.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
@@ -202,6 +232,7 @@ export default function Contact() {
                       </FormItem>
                     )}
                   />
+                  <input type="hidden" name="_replyto" value="" />
                   
                   <Button type="submit" size="lg" className="w-full h-12 text-base shadow-md" data-testid="button-submit">
                     Send Message

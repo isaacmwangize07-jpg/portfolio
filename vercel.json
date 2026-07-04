@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "build": {
+    "env": {
+      "BASE_PATH": "/"
+    },
+    "command": "pnpm --filter @workspace/portfolio run build",
+    "distDir": "artifacts/portfolio/dist/public"
+  }
+}

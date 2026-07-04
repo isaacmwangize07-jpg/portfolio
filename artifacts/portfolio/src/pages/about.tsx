@@ -7,28 +7,28 @@ import { BackToTop } from "@/components/back-to-top";
 export default function About() {
   const milestones = [
     {
-      year: "2023 - Present",
+      year: "2026 - Present",
       title: "Senior Full Stack Developer",
       company: "TechNova Solutions",
       desc: "Architecting microservices using Django and React for enterprise clients."
     },
     {
-      year: "2020 - 2023",
+      year: "2025 - 2026",
       title: "Backend Developer",
       company: "DataFlow Inc",
       desc: "Built high-performance data processing pipelines in Python and PostgreSQL."
     },
     {
-      year: "2018 - 2020",
+      year: "2024 - 2025",
       title: "Junior Web Developer",
       company: "Creative Digital",
       desc: "Developed responsive web interfaces and integrated CMS platforms."
     },
     {
-      year: "2018",
+      year: "2023-2027",
       title: "BSc Computer Science",
-      company: "University of Nairobi",
-      desc: "Graduated with honors, specialized in software engineering."
+      company: "Pwani University",
+      desc: "Graduated with honors, specialized in Computer Science."
     }
   ];
 
