@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "WzT-5eD5AduQWGWXepLl_"
+uri = "file://artifacts/portfolio/public/avatar.png"
+type = "image"
+title = "Professional software developer portrait"
