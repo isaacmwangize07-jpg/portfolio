@@ -1,8 +1,7 @@
 {
   "framework": "vite",
-  "rootDirectory": "artifacts/portfolio",
   "buildCommand": "pnpm --filter @workspace/portfolio run build",
-  "outputDirectory": "dist/public",
+  "outputDirectory": "artifacts/portfolio/dist/public",
   "env": {
     "BASE_PATH": "/"
   }
