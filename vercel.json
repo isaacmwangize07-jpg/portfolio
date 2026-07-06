@@ -1,6 +1,8 @@
 {
-  "framework": "vite",
-  "buildCommand": "pnpm --filter @workspace/portfolio run build",
-  "outputDirectory": "artifacts/portfolio/dist",
-  "installCommand": "pnpm install --frozen-lockfile"
+  "version": 2,
+  "build": {
+    "env": {
+      "BASE_PATH": "/"
+    }
+  }
 }
